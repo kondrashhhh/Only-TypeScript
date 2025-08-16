@@ -1,6 +1,14 @@
 {
-  /* Visit https://aka.ms/tsconfig to read more about this file */
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@styles/*": ["src/styles/*"],
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
     "rootDir": "src",
     "outDir": "build",
     "lib": ["dom", "esnext"],
@@ -15,15 +23,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "jsx": "react-jsx"
   },
-  "exclude": ["node_modules", "build", "coverage", "webpack.*.js", "*.config.js", "*.test.ts*"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "coverage", "webpack.*.js", "*.config.js", "*.test.ts*"]
 }

@@ -1,0 +1,72 @@
+@use '@styles/variables.scss' as *;
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-black-blue;
+    margin-bottom: 20px;
+}
+
+.slideTitle {
+    color: $color-blue;
+    font-size: 25px;
+    font-family: "Bebas Neue";
+
+    @include vp--680 {
+        font-size: calcVW(16, 320);
+    }
+}
+
+.container {
+    opacity: 0;
+    position: relative;
+    padding: 40px 80px;
+
+    @include vp--680 {
+        border-top: 1px solid #C7CDD9;
+        padding: 50px 0 10px;
+    }
+}
+
+.slider {
+    padding: 10px 0;
+    overflow: visible;
+}
+
+.slideContent {
+    color: $color-black-blue;
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include vp--680 {
+        font-size: calcVW(14, 320);
+        line-height: 140%;
+    }
+}
+
+.navigation button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    &.prev {
+        left: 20px;
+        top: 50%;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.next {
+        right: 20px;
+        top: 50%;
+    }
+}
