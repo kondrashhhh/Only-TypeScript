@@ -17,7 +17,7 @@ markdown
 
 3. **Запустите проект**:
    ```bash
-  npm start
+   npm start
 
 4. **Откройте в браузере**:
    ```bash
