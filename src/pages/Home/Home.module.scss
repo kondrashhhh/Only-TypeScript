@@ -3,7 +3,7 @@
 .home {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: visible;
   border-left: 1px solid rgba($color: $color-black-blue, $alpha: 0.1);
   border-right: 1px solid rgba($color: $color-black-blue, $alpha: 0.1);
 
