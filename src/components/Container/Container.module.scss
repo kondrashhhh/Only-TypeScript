@@ -8,4 +8,8 @@
     @include vp--1280 {
         padding: 0 calcVW(30, 320);
     }
+
+    @include vp--680 {
+        overflow-x: hidden;
+    }
 }
